@@ -9,28 +9,22 @@ import x from 'icons/money.svg'
 import styled from 'styled-components';
 import './index.scss'
 import Nav from './components/Nav';
-const Wrapper=styled.div`
-    min-height: 100vh;
-    display: flex; 
-    flex-direction: column;
-`;
-const Main=styled.div`
-   flex-grow: 1;
-   overflow: auto;
-`;
+import Layout from './components/Layout';
+import Money from './views/Money';
+import Tag from './views/Tag';
+import Statistics from './views/Statistics';
+import Nomatch from './views/Nomatch';
+
 console.log(x);
 function App() {
   return (
     <Router>
-      <Wrapper>
-      <Main>
-
         <Switch>
           <Route path="/money">
             <Money />
           </Route>
           <Route path="/tag">
-            <Tag />
+            <Tag/>
           </Route>
           <Route path="/Statistics">
             <Statistics />
@@ -41,26 +35,8 @@ function App() {
           </Route>
         </Switch>
 
-      </Main>
-        <Nav/>
-    </Wrapper>
     </Router>
   );
 }
-function Nomatch() {
-  return(
-    <div>页面不存在</div>
-  )
-}
-function Statistics() {
-  return <h2>统计页</h2>;
-}
 
-function Money() {
-  return <h2>记账页</h2>;
-}
-
-function Tag() {
-  return <h2>标签页</h2>;
-}
 export default App;
