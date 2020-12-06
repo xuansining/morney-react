@@ -6,10 +6,7 @@ import {
   Redirect,
 } from 'react-router-dom';
 import x from 'icons/money.svg'
-import styled from 'styled-components';
 import './index.scss'
-import Nav from './components/Nav';
-import Layout from './components/Layout';
 import Money from './views/Money';
 import Tag from './views/Tag';
 import Statistics from './views/Statistics';
